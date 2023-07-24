@@ -2,7 +2,7 @@
 
 
 ## About
-Hyperslice is a simple link shortener built using Astro, Koa, and SQL. The name comes from the first word in HTTP, and the action of slicing a link! <br><br>
+Hyperslice is a simple link shortener built using Vue, Nodejs, and MYSQL. The name comes from the first word in HTTP, and the action of slicing a link! <br><br>
 Check it out [here](https://link-shortener-sandy.vercel.app/)
 
 ## Purpose
