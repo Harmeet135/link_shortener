@@ -38,7 +38,6 @@ export default {
       shortenedLink: "", 
     };
   },
-// LinkForm.vue
 methods: {
   submitLink() {
     axios.post(process.env.VUE_APP_API_URL, {
@@ -118,8 +117,6 @@ a#webp {
 a#jpg {
     font-size: 1.5rem;
 }
-
-
 
 /* error message css */
 .link-invalid+.link-error {

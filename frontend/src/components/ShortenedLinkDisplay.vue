@@ -98,7 +98,6 @@ data() {
 }
 
 /* Link QR Code */
-
 .link-qr-wrapper {
     height: 150px;
     width: inherit;
@@ -111,6 +110,10 @@ data() {
 
 .link-qr > canvas {
     border: 5px solid white;
+}
+
+.link-final{
+    width: 92%%;
 }
 
 .qr-controls {
@@ -144,11 +147,7 @@ data() {
 .hide {
     display: none !important;
 }
-
-
 .material-symbols-sharp{
   display: flex;
 }
-
-
 </style>
