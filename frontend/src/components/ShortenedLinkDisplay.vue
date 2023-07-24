@@ -113,7 +113,7 @@ data() {
 }
 
 .link-final{
-    width: 92%%;
+    width: 92%;
 }
 
 .qr-controls {
