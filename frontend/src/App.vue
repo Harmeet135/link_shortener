@@ -5,7 +5,7 @@
 				<div>
 					<h1 class="hero-header">HyperSlice</h1>
 				</div>
-				<a href="https://github.com/" target="_blank">
+				<a href="https://github.com/Harmeet135/link_shortener" target="_blank">
 					<img id="github-logo"
           :src="require('@/assets/github.svg')"
 						width={32}

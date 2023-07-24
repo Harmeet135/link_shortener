@@ -41,12 +41,11 @@ export default {
 // LinkForm.vue
 methods: {
   submitLink() {
-    axios
-      .post("http://localhost:8000", {
-        url: this.original_url, 
-      })
+    axios.post(process.env.VUE_APP_API_URL, {
+  url: this.original_url, 
+})
       .then((response) => {
-        this.shortenedLink = 'localhost:8000/' + response.data;
+        this.shortenedLink = process.env.VUE_APP_SHORT + response.data;
         this.$emit('shortened', this.shortenedLink); 
         this.original_url = '';
       })
