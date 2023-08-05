@@ -8,11 +8,9 @@ app.use(cors());
 
 require('dotenv').config();
 
-// Import the route handlers from the "routes" folder
 const shortenRoute = require('./routes/shorten');
 const redirectRoute = require('./routes/redirect');
 
-// Use the route handlers
 app.use('/', shortenRoute);
 app.use('/', redirectRoute);
 
