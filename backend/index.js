@@ -1,6 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+// const redis = require('redis');
+
+// const redisClient = redis.createClient();
+
+// redisClient.on('error', (error) => {
+//     console.error(`Redis Error: ${error}`);
+// });
+
+// (async () => {
+//     await redisClient.connect();
+// })();
+
+// redisClient.on('connect', () => console.log('Redis Client Connected'));
+
 
 const app = express();
 app.use(bodyParser.json());
@@ -22,3 +36,6 @@ app.get('/', (req, res) => {
 app.listen(process.env.PORT, () => {
     console.log('Server started on port 8000');
 });
+
+
+// module.exports = redisClient;

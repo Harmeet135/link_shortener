@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const crypto = require('crypto');
-
 const db = require('../db/database.js');
-
+const redisClient = require('../db/redis.js');
 function generateShortCode() {
     return crypto.randomBytes(3).toString('base64').replace(/\+/g, '0').replace(/\//g, '0');
 }
@@ -42,6 +41,9 @@ router.post('/', async (req, res) => {
 
         db.query('INSERT INTO alias (link_id, alias) VALUES (?, ?)', [link_id, code], (err) => {
             if (err) throw err;
+
+            // Cache the newly created code and URL in Redis
+            redisClient.set(code, url, 'EX', 3600);
             res.send(code);
         });
     });

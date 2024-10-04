@@ -7,6 +7,15 @@ const db = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE
   });
+
+
+// local host set up
+//   const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     database: 'shortener',
+// });
   
 db.connect((err) => {
     if (err) throw err;
