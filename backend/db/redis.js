@@ -7,7 +7,9 @@ redisClient.on('error', (error) => {
 });
 
 (async () => {
-    await redisClient.connect();
+    await redisClient.connect({
+        //add hosted server
+    });
 })();
 
 redisClient.on('connect', () => console.log('Redis Client Connected'));
